@@ -20,3 +20,13 @@ f.外攻内攻比例
 
 ### 统计文件夹下的子文件夹统计项目内容
 - 1-区服-bar: 各个boss每个区服各有多少各团队
+- 2-Boss职业比例-pie
+- 3-Boss心法比例-pie
+- 4-Boss奶妈数量-pie
+- 5-BossT数量-pie
+- 6-Boss外功内功比例-pie
+- 7-BossDPS各心法比例-pie
+- 8-Boss奶妈各心法比例-pie
+- 9-BossT各心法比例-pie
+- 10-团长职业类型分布-pie
+- 11-通关时间-line
