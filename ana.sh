@@ -5,14 +5,12 @@ echo "正在处理文件"
 cd json_raw
 python3 convert.py
 
-cd ../analytics
+cd ../analytics/script
 
-for i in {1..10};
+for i in {1..11};
 do
-    cd $i
-    python3 parse.py
-    cd ../
+    python3 "$i.py"
 done
 
-cd ../
+cd ../../
 python3 analytics/combine.py

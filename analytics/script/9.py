@@ -1,5 +1,7 @@
 import os
 import json
+import sys
+from output import output
 
 def readXF():
     global school
@@ -26,10 +28,13 @@ if __name__ == "__main__":
 
     readXF()
 
+    stats = sys.argv[0].replace('.py', '')
     for root,dirs,files in os.walk("../../json_raw"):
         for file in files:
             if file.find('json') != -1:
-                
+                file_name_arr = file.replace('.json', '').split('_')
+                event_id = file_name_arr[0]
+                boss_id = file_name_arr[1]
                 with open('../../json_raw/%s'%file, 'r', encoding='utf-8') as f:
                     data = json.loads(f.read())
                     f.close()
@@ -62,7 +67,5 @@ if __name__ == "__main__":
                         "value": each[1]
                     })
                 
-                with open("%s.json" % file.replace(".json", ""), 'w', encoding='utf-8') as f:
-                    f.write(json.dumps(arr, ensure_ascii=False))
-                    f.close()
+                output(event_id, stats, boss_id, arr)
                         
