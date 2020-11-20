@@ -7,9 +7,12 @@ python3 convert.py
 
 cd ../analytics/script
 
-for i in {1..11};
+for i in *.py;
 do
-    python3 "$i.py"
+    name=${i%.py*}
+    if [ $name != 'output' ]; then
+        python3 "$i"
+    fi
 done
 
 cd ../../
