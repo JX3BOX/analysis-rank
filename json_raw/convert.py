@@ -12,8 +12,9 @@ if __name__ == "__main__":
                             title = f.readline().replace('\n', '').replace("\"", "").split(',')
                             data = []
                             for line in f:
-                                line = "[" + line.replace("\n", "") + "]"
-                                line = json.loads(line.replace(",,",",\"\","))
+                                line = "[" + line.replace(",\n", ",\"\"").replace("\n", "") + "]"
+                                line = line.replace(",,",",\"\",")
+                                line = json.loads(line)
                                 dict = {}
                                 
                                 for idx in range(0,len(title)):
