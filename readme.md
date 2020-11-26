@@ -15,18 +15,27 @@ f.外攻内攻比例
 
 ## 项目结构
 - csv: 原数据
-- json_raw: 根据csv原数据导出的json格式数据
+    event_id 活动编号
+        源csv文件
+- json_raw: 根据csv原数据导出的json格式数据 格式：活动编号_成就id
 - analytics: 统计文件夹
+    script: 每一个统计项目的单独py脚本
+    event${i}: 活动编号
+        每一个统计项目的单独文件夹
+            每一个boss（成就id）
+- stats: 最终生成的统计文件
+    event${i}.json 以活动编号为标注的最终数据文件
 
-### 统计文件夹下的子文件夹统计项目内容
-- 1-区服-bar: 各个boss每个区服各有多少各团队
-- 2-Boss职业比例-pie
-- 3-Boss心法比例-pie
-- 4-Boss奶妈数量-pie
-- 5-BossT数量-pie
-- 6-Boss外功内功比例-pie
-- 7-BossDPS各心法比例-pie
-- 8-Boss奶妈各心法比例-pie
-- 9-BossT各心法比例-pie
-- 10-团长职业类型分布-pie
-- 11-通关时间-line
+### 统计项目内容
+- bar_server_all: 每个区服各有多少各团队
+- bar_server_top10: 前十名的团队的区服分布
+- pie_dps_xf_ratio dps心法比例
+- pie_hps_count 奶妈数量
+- pie_hps_xf_ratio 奶妈各心法比例
+- pie_leader_type_ratio 团长职业类型分布
+- pie_neiwaigong_ratio 外功内功比例
+- pie_school_ratio 门派比例
+- pie_tank_count t数量
+- pie_tank_xf_ratio t各心法比例
+- pie_xf_ratio 各心法比例
+
