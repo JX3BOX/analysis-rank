@@ -15,16 +15,16 @@ f.外攻内攻比例
 
 ## 项目结构
 - csv: 原数据
-    event_id 活动编号
-        源csv文件
+    - event_id 活动编号
+        - 源csv文件
 - json_raw: 根据csv原数据导出的json格式数据 格式：活动编号_成就id
 - analytics: 统计文件夹
-    script: 每一个统计项目的单独py脚本
-    event${i}: 活动编号
-        每一个统计项目的单独文件夹
-            每一个boss（成就id）
+    - script: 每一个统计项目的单独py脚本
+    - event${i}: 活动编号
+        - 每一个统计项目的单独文件夹
+            - 每一个boss（成就id）
 - stats: 最终生成的统计文件
-    event${i}.json 以活动编号为标注的最终数据文件
+    - event${i}.json 以活动编号为标注的最终数据文件
 
 ### 统计项目内容
 - bar_server_all: 每个区服各有多少各团队
