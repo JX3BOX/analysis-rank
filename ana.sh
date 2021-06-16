@@ -17,3 +17,5 @@ done
 
 cd ../../
 python3 analytics/combine.py
+cd stats
+python3 insertAllBosses.py
