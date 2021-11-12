@@ -18,6 +18,8 @@ if __name__ == "__main__":
                 
                 dict = {}
                 out_d = {"servers": []}
+                # 按照finishtime 排序
+                data.sort(key=lambda k: (k.get('finish_time', 0)))
                 for i in range(0,10):
                     team = data[i]
                     if team["server"] in dict:
