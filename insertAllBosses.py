@@ -75,12 +75,12 @@ def pie(d):
 
 
 if __name__ == "__main__":
-    for root, dirs, files in os.walk("./"):
+    for root, dirs, files in os.walk("./stats/"):
         for file in files:
             if file.find('json') != -1:
                 data = None
                 event_id = file.replace('event', '').replace('.json', '')
-                with open(file, 'r') as f:
+                with open('stats/'+file, 'r') as f:
                     data = json.loads(f.read())
                     f.close()
                 for key in data.keys():
@@ -90,6 +90,6 @@ if __name__ == "__main__":
                     else:
                         key1 = key
                     data[key]["all"] = eval('%s(data["%s"])' % (key1, key))
-                with open("event%s.json" % (event_id), 'w', encoding='utf-8') as f:
+                with open("stats/event%s.json" % (event_id), 'w', encoding='utf-8') as f:
                     f.write(json.dumps(data, ensure_ascii=False))
                     f.close()

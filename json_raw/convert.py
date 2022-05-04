@@ -13,7 +13,7 @@ if __name__ == "__main__":
                             data = []
                             for line in f:
                                 line = "[" + line.replace(",\n", ",\"\"").replace("\n", "") + "]"
-                                line = line.replace(",,",",\"\",")
+                                line = line.replace(",,",",\"\",").replace(",,",",\"\",")
                                 line = json.loads(line)
                                 dict = {}
                                 
