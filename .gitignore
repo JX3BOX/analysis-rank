@@ -248,3 +248,4 @@ zsdoc/data
 
 *.csv
 json_raw/*.json
+analytics/event*
