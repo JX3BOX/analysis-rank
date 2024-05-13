@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@jx3box/jx3box-data": "^3.5.8",
+    "lodash": "^4.17.21"
+  }
+}

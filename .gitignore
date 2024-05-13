@@ -249,3 +249,6 @@ zsdoc/data
 *.csv
 json_raw/*.json
 analytics/event*
+
+node_modules/
+package-lock.json
